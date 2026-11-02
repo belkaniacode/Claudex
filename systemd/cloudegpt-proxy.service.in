@@ -1,0 +1,20 @@
+# Managed by org.kde.plasma.cloudegptproxy. No automatic activation.
+[Unit]
+Description=Local LiteLLM proxy (manual widget control)
+
+[Service]
+Type=exec
+WorkingDirectory=@WORKING_DIRECTORY@
+ExecStart=@EXEC_START@
+ExecStartPost=/usr/bin/python3 -I -B @HELPER@ profile-on
+ExecStopPost=/usr/bin/python3 -I -B @HELPER@ profile-off
+TimeoutStartSec=35s
+Environment=LITELLM_LOCAL_MODEL_COST_MAP=True
+Environment=PYTHONUNBUFFERED=1
+Environment=PROXY_PORT=@PORT@
+Restart=no
+KillMode=control-group
+TimeoutStopSec=30s
+UMask=0077
+StandardOutput=journal
+StandardError=journal

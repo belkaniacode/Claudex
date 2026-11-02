@@ -1,0 +1,30 @@
+# Local assistant configuration and generated indexes
+.claude/
+.ai-factory/
+.ai-factory.json
+.mcp.json
+.code-review-graph/
+
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Credentials, private settings, backups, and logs
+.env
+.env.*
+!.env.example
+.litellm/
+profile-backups/
+master-key.txt
+*.log
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*~
+.DS_Store
