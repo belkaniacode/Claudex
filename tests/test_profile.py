@@ -73,7 +73,7 @@ class ProfileTests(unittest.TestCase):
 
     def test_model_picker_keeps_profile_enabled_and_restores_original_model(self):
         original = {"model": "opus", "language": "russian"}
-        for model in ("gpt-6-astra", "gpt-6-luna", "sonnet", "opus", "haiku"):
+        for model in ("gpt-6-astra", "gpt-6-luna", "sonnet", "opus", "haiku", "fable"):
             with self.subTest(model=model), tempfile.TemporaryDirectory() as temp:
                 manager = profile.Profile(Path(temp) / "state", Path(temp))
                 manager.target.parent.mkdir()

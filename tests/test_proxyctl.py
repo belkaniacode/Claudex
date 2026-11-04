@@ -202,7 +202,7 @@ class ProfileLifecycleTests(unittest.TestCase):
                 manager.key.write_text("test-only-key")
                 manager.activate(4001)
                 settings, _ = manager.settings()
-                settings["model"] = "gpt-6-astra"
+                settings["model"] = "fable"
                 manager.target.write_text(json.dumps(settings))
                 output = io.StringIO()
                 with patch.object(backend, "mutation_lock", side_effect=nullcontext), \

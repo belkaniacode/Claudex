@@ -28,7 +28,7 @@ MODELS = {
 # Claude's model picker persists root.model while the temporary profile is active.
 # These aliases still resolve through the unchanged GPT mappings above.
 SELECTABLE_MODELS = {value for key, value in MODELS.items() if key.endswith("_MODEL")} | {
-    "sonnet", "opus", "haiku",
+    "sonnet", "opus", "haiku", "fable",
 }
 
 
